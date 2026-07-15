@@ -18,7 +18,8 @@ TEMP_CONFIG=$(mktemp)
 sed \
     -e "s|\${MQTT_ADDRESS}|${MQTT_ADDRESS:-localhost:1883}|g" \
     -e "s|\${MQTT_USER}|${MQTT_USER:-}|g" \
-    -e "s|\${MQTT_PASSWD}|${MQTT_PASSWD:-}|g" \
+    -e "s|\${MQTT_PASSWORD}|${MQTT_PASSWORD:-}|g" \
+    -e "s|\${MQTT_TOPIC}|${MQTT_TOPIC:-}|g" \
     "$CONFIG_OUT" > "$TEMP_CONFIG"
 
 mv "$TEMP_CONFIG" "$CONFIG_OUT"
