@@ -1,3 +1,5 @@
+I am updating this to work in docker to remove the need for raspberry pi.
+
 # aquapureD  
 linux daemon to control Aquapure SWG without the need for a pool control panel.
 
