@@ -36,13 +36,15 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           # Automatically tags as 'master' on branch push, or '1.0.0' on tag release
           tags: |
-            type=ref,event=branch
+            type=ref,event=tag
             type=semver,pattern={{version}}
+            type=raw,value=latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
