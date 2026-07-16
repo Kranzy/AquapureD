@@ -215,8 +215,8 @@ void readCfg (char *cfgFile)
   //ini_gets("AUDIOTRON", "CACHE", "/tmp/AUDIOTRON.cache", _atconfig_.cache_file, sizearray(_atconfig_.cache_file), inifile);
   //ini_gets("AUDIOTRON", "CACHE", "/tmp/AUDIOTRON.cache", _atconfig_.cache_file, 512, inifile);
   ini_gets("AQUACONTROLD", "MQTT_ADDRESS", NULL, _apconfig_.mqtt_server, sizearray(_apconfig_.mqtt_server), cfgFile);
-  ini_gets("AQUACONTROLD", "MQTT_USER", NULL, _apconfig_.mqtt_user, sizearray(_apconfig_.mqtt_user), cfgFile);
-  ini_gets("AQUACONTROLD", "MQTT_PASSWD", NULL, _apconfig_.mqtt_passwd, sizearray(_apconfig_.mqtt_passwd), cfgFile);
+  ini_gets("AQUACONTROLD", "MQTT_USERNAME", NULL, _apconfig_.mqtt_user, sizearray(_apconfig_.mqtt_user), cfgFile);
+  ini_gets("AQUACONTROLD", "MQTT_PASSWORD", NULL, _apconfig_.mqtt_passwd, sizearray(_apconfig_.mqtt_passwd), cfgFile);
   ini_gets("AQUACONTROLD", "MQTT_TOPIC", DEFAULT_MQTT_AQ_TP,_apconfig_.mqtt_topic, sizearray(_apconfig_.mqtt_topic), cfgFile);
 
   ini_gets("AQUACONTROLD", "MQTT_DZ_PUB_TOPIC", NULL,_apconfig_.mqtt_dz_pub_topic, sizearray(_apconfig_.mqtt_dz_pub_topic), cfgFile);
